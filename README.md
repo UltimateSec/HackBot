@@ -1,19 +1,29 @@
-# hw-iot-c2
-一款利用某云厂商的物联网平台作为c2的框架
+# HackBot
+HackBot is an AI driven security scanning tool that combines OpenAI and Projectdiscovery.
+
+HackBot是一款人工智能驱动的安全扫描工具，结合了OpenAI和Projectdiscovery。
+
 
 make:
 ```go
-CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -ldflags="-s -w -H=windowsgui"  -o hw-iot-c2.exe .
-CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags="-s -w"  -o hw-iot-c2 .
+GOOS=windows GOARCH=amd64 go build   -o HackBot.exe .
+GOOS=linux GOARCH=amd64 go build  -o HackBot .
+GOOS=drawin GOARCH=amd64 go build  -o HackBot .
 ```
 
 use:
 ```
-hw-iot-c2.exe -id xxx_xx -pass xxxxxxxx -server tls://xxx.xxx.myhuaweicloud.com:8883
+./HackBot -p http://proxy -t sk-xxxxx
+
+
+Usage of ./HackBot:
+  -p string
+    	Proxy
+  -t string
+    	Openai Token
 ```
 
 原文：
-
 ![image](https://github.com/UltimateSec/ultimaste-nuclei-templates/blob/main/qrcode.jpg)
 
 # 免责声明：
